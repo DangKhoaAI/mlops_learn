@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSR App (FastAPI Backend)</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Ứng dụng CSR Đơn Giản</h1>
+
+    <h2>Danh sách Sản phẩm</h2>
+    <ul id="item-list">
+        <li>Đang tải dữ liệu...</li>
+    </ul>
+
+    <hr>
+
+    <h2>Thêm sản phẩm mới</h2>
+    <form id="add-item-form">
+        <div>
+            <label for="item-name">Tên sản phẩm:</label>
+            <input type="text" id="item-name" required>
+        </div>
+        <div>
+            <label for="item-desc">Mô tả:</label>
+            <input type="text" id="item-desc">
+        </div>
+        <button type="submit">Thêm</button>
+    </form>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
