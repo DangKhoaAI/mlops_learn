@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự đoán chất lượng rượu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Dự đoán chất lượng rượu (ElasticNet)</h1>
+        <p>Nhập 13 đặc trưng của rượu để dự đoán chất lượng.</p>
+
+        <form id="wine-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="alcohol">Alcohol:</label>
+                    <input type="number" step="0.01" id="alcohol" name="alcohol" value="13.5" required>
+                </div>
+                <div class="form-group">
+                    <label for="malic_acid">Malic Acid:</label>
+                    <input type="number" step="0.01" id="malic_acid" name="malic_acid" value="1.7" required>
+                </div>
+                <div class="form-group">
+                    <label for="ash">Ash:</label>
+                    <input type="number" step="0.01" id="ash" name="ash" value="2.5" required>
+                </div>
+                <div class="form-group">
+                    <label for="alcalinity_of_ash">Alcalinity of Ash:</label>
+                    <input type="number" step="0.01" id="alcalinity_of_ash" name="alcalinity_of_ash" value="18.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="magnesium">Magnesium:</label>
+                    <input type="number" step="0.1" id="magnesium" name="magnesium" value="98.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="total_phenols">Total Phenols:</label>
+                    <input type="number" step="0.01" id="total_phenols" name="total_phenols" value="2.5" required>
+                </div>
+                <div class="form-group">
+                    <label for="flavanoids">Flavanoids:</label>
+                    <input type="number" step="0.01" id="flavanoids" name="flavanoids" value="2.7" required>
+                </div>
+                <div class="form-group">
+                    <label for="nonflavanoid_phenols">Nonflavanoid Phenols:</label>
+                    <input type="number" step="0.01" id="nonflavanoid_phenols" name="nonflavanoid_phenols" value="0.3" required>
+                </div>
+                <div class="form-group">
+                    <label for="proanthocyanins">Proanthocyanins:</label>
+                    <input type="number" step="0.01" id="proanthocyanins" name="proanthocyanins" value="1.8" required>
+                </div>
+                <div class="form-group">
+                    <label for="color_intensity">Color Intensity:</label>
+                    <input type="number" step="0.01" id="color_intensity" name="color_intensity" value="5.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="hue">Hue:</label>
+                    <input type="number" step="0.01" id="hue" name="hue" value="1.05" required>
+                </div>
+                <div class="form-group">
+                    <label for="od280_od315_of_diluted_wines">OD280/OD315 Diluted Wines:</label>
+                    <input type="number" step="0.01" id="od280_od315_of_diluted_wines" name="od280_od315_of_diluted_wines" value="3.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="proline">Proline:</label>
+                    <input type="number" step="1" id="proline" name="proline" value="750" required>
+                </div>
+            </div>
+            
+            <button type="submit" id="submit-button">Dự đoán</button>
+        </form>
+
+        <div class="result-container">
+            <h2>Kết quả dự đoán (Class):</h2>
+            <div id="prediction-result" class="result-box">---</div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
